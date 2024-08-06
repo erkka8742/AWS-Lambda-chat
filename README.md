@@ -1,4 +1,4 @@
-Files for creating a chat website with text and images.
+Chat website with text and images.
 Each JS file runs on its own AWS Lambda function.
 
 Live at https://join2.chat
