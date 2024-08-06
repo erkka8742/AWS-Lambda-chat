@@ -1,4 +1,3 @@
-// Importing the required packages from AWS SDK v3
 const { DynamoDBClient } = require('@aws-sdk/client-dynamodb');
 const { DynamoDBDocumentClient, GetCommand, PutCommand } = require('@aws-sdk/lib-dynamodb');
 const ddbClient = new DynamoDBClient({ region: "eu-north-1" });

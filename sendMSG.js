@@ -5,7 +5,7 @@ const ddbClient = new DynamoDBClient({ region: "eu-north-1" });
 const docClient = DynamoDBDocumentClient.from(ddbClient);
 const { ApiGatewayManagementApiClient, PostToConnectionCommand } = require("@aws-sdk/client-apigatewaymanagementapi");
 const apiGatewayClient = new ApiGatewayManagementApiClient({
-    endpoint: "https://stjk3125d8.execute-api.eu-north-1.amazonaws.com/production"
+    endpoint: "!websocket URL!"
 });
 
 exports.handler = async (event) => {

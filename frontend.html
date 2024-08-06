@@ -961,7 +961,7 @@
         // tämä käytetään sivun avautuessa ja huoneen vaihtamisessa
         function loadChat() {
             if (websocket === null || websocket.readyState === WebSocket.CLOSED) {
-                websocket = new WebSocket('wss://stjk3125d8.execute-api.eu-north-1.amazonaws.com/production/');
+                websocket = new WebSocket('websocket url');
                 setWebSocketHandlers();
             } else {
                 websocket.close();
@@ -988,7 +988,7 @@
             topChatName.textContent = currentRoom
 
             // hae vanhat viestit palvelimelta ja näytä ne
-            fetch('https://e0ar9ynqil.execute-api.eu-north-1.amazonaws.com/default/getMessages', {
+            fetch('getMessages URL', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'text/plain',
@@ -1529,7 +1529,7 @@
             };
 
             websocket.onclose = function (event) {
-                websocket = new WebSocket('wss://stjk3125d8.execute-api.eu-north-1.amazonaws.com/production/');
+                websocket = new WebSocket('websocket url');
                 setWebSocketHandlers();
             };
 
@@ -1620,7 +1620,7 @@
                 let renamedFile = new File([file], newFilename, { type: file.type });
 
                 // ensin pyydetään palvelimelta url minhin kuva lähetetään
-                fetch('https://ammmwxwzo1.execute-api.eu-north-1.amazonaws.com/default/createS3URL', {
+                fetch('createS3URL URL', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'text/plain',
@@ -1744,7 +1744,7 @@
 
             if (checkName()) {
                 write('Things happening...')
-                fetch('https://d5hwzcre8a.execute-api.eu-north-1.amazonaws.com/default/newChat', {
+                fetch('newChat URL', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'text/plain',
@@ -1802,7 +1802,7 @@
 
             if (checkName()) {
                 write('Things happening...');
-                fetch('https://d5hwzcre8a.execute-api.eu-north-1.amazonaws.com/default/newChat', {
+                fetch('newChat URL', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'text/plain',
